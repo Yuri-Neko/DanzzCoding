@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<!-- Created By: Danzz Coding | https://danzzcoding.vercel.app -->
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>DANZZ API - DONATION</title>
+		
+		<!-- ICON -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">    
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    	<!-- FONT -->
+    	<link rel="preconnect" href="https://fonts.gstatic.com">
+    	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
+    	<link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    
+    	<!-- VENDORS -->
+    	<link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+   	 <link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
+   	 <link rel="stylesheet" href="vendors/css/vendors.bundle.base.css">
+ 	   <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+ 	   <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
+  	  <link href="vendors/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  	  <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">	
+    	
+		<!-- Site favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="src/images/favicon.ico"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="src/images/favicon.ico"
+		/>
+
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendors/styles/icon-font.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/datatables/css/dataTables.bootstrap4.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/datatables/css/responsive.bootstrap4.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-GBZ3SGGX85");
+		</script>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+		</script>
+		<!-- End Google Tag Manager -->
+	</head>
+	<body>
+		<div class="pre-loader">
+			<div class="pre-loader-box">
+				<div class="loader-logo">
+				</div>
+				<div class="loader-progress" id="progress_div">
+					<div class="bar" id="bar1"></div>
+				</div>
+				<div class="percent" id="percent1">0%</div>
+				<div class="loading-text">Loading...</div>
+			</div>
+		</div>
+
+		<div class="header">
+			<div class="header-left">
+				<div class="menu-icon bi bi-list"></div>
+				<div
+					class="search-toggle-icon bi bi-search"
+					data-toggle="header_search"
+				></div>
+				<div class="header-search">
+					<form>
+						<div class="form-group mb-0">
+							<i class="dw dw-search2 search-icon"></i>
+							<input
+								type="text"
+								class="form-control search-input"
+								placeholder="Search Here"
+							/>
+							<div class="dropdown">
+								<a
+									class="dropdown-toggle no-arrow"
+									href="#"
+									role="button"
+									data-toggle="dropdown"
+								>
+									<i class="ion-arrow"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<div class="form-group row">
+										<label class="col-sm-12 col-md-2 col-form-label"
+											>From</label
+										>
+										<div class="col-sm-12 col-md-10">
+											<input
+												class="form-control form-control-sm form-control-line"
+												type="text"
+											/>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-12 col-md-2 col-form-label">To</label>
+										<div class="col-sm-12 col-md-10">
+											<input
+												class="form-control form-control-sm form-control-line"
+												type="text"
+											/>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-12 col-md-2 col-form-label"
+											>Subject</label
+										>
+										<div class="col-sm-12 col-md-10">
+											<input
+												class="form-control form-control-sm form-control-line"
+												type="text"
+											/>
+										</div>
+									</div>
+									<div class="text-right">
+										<button class="btn btn-primary">Search</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="header-right">
+				<div class="dashboard-setting user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="javascript:;"
+							data-toggle="right-sidebar"
+						>
+							<i class="dw dw-settings"></i>
+						</a>
+					</div>
+				</div>
+				<div class="user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="#"
+							role="button"
+							data-toggle="dropdown"
+						>
+							<i class="icon-copy dw dw-notification"></i>
+							<span class="badge notification-active"></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="notification-list mx-h-350 customscroll">
+								<ul>
+									<li>
+										<a href="https://youtube.com/c/DanzzCoding">
+											<img src="src/images/icon2.png" alt="" />
+											<h3>Danzz Coding</h3>
+											<p>
+												Don't Forget Subscribe Yt: DanzzCoding
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="https://instagram.com/ramdani_real01">
+											<img src="src/images/icon2.png" alt="" />
+											<h3>Danzz Coding</h3>
+											<p>
+												Don't Forget Follow Ig: @ramdani_real01
+											</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="user-info-dropdown">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle"
+							href="#"
+							role="button"
+							data-toggle="dropdown"
+						>
+							<span class="user-icon">
+								<img src="src/images/icon.png" style="width: 52px;"  alt="" />
+							</span>
+							<span class="user-name">Danzz Coding</span>
+						</a>
+						<div
+							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+						>
+							<a class="dropdown-item" href="/profile"
+								><i class="dw dw-user1"></i> Profile</a
+							>
+							<a class="dropdown-item" href="#"
+								><i class="dw dw-settings2"></i> Setting</a
+							>
+							<a class="dropdown-item" href="https://wa.me/6288296339947"
+								><i class="dw dw-help"></i> Help</a
+							>
+							<a class="dropdown-item" href="/login"
+								><i class="dw dw-logout"></i> Log Out</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="right-sidebar">
+			<div class="sidebar-title">
+				<h3 class="weight-600 font-16 text-blue">
+					Display Settings
+					<span class="btn-block font-weight-400 font-12"
+						>User Interface Settings</span
+					>
+				</h3>
+				<div class="close-sidebar" data-toggle="right-sidebar-close">
+					<i class="icon-copy ion-close-round"></i>
+				</div>
+			</div>
+			<div class="right-sidebar-body customscroll">
+				<div class="right-sidebar-body-content">
+					<h4 class="weight-600 font-18 pb-10">Header Background</h4>
+					<div class="sidebar-btn-group pb-30 mb-10">
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary header-white active"
+							>Light</a
+						>
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary header-dark"
+							>Dark</a
+						>
+					</div>
+
+					<h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
+					<div class="sidebar-btn-group pb-30 mb-10">
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary sidebar-light"
+							>Light</a
+						>
+						<a
+							href="javascript:void(0);"
+							class="btn btn-outline-primary sidebar-dark active"
+							>Dark</a
+						>
+					</div>
+
+					<h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
+					<div class="sidebar-radio-group pb-10 mb-10">
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebaricon-1"
+								name="menu-dropdown-icon"
+								class="custom-control-input"
+								value="icon-style-1"
+								checked=""
+							/>
+							<label class="custom-control-label" for="sidebaricon-1"
+								><i class="fa fa-angle-down"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebaricon-2"
+								name="menu-dropdown-icon"
+								class="custom-control-input"
+								value="icon-style-2"
+							/>
+							<label class="custom-control-label" for="sidebaricon-2"
+								><i class="ion-plus-round"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebaricon-3"
+								name="menu-dropdown-icon"
+								class="custom-control-input"
+								value="icon-style-3"
+							/>
+							<label class="custom-control-label" for="sidebaricon-3"
+								><i class="fa fa-angle-double-right"></i
+							></label>
+						</div>
+					</div>
+
+					<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
+					<div class="sidebar-radio-group pb-30 mb-10">
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-1"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-1"
+								checked=""
+							/>
+							<label class="custom-control-label" for="sidebariconlist-1"
+								><i class="ion-minus-round"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-2"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-2"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-2"
+								><i class="fa fa-circle-o" aria-hidden="true"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-3"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-3"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-3"
+								><i class="dw dw-check"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-4"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-4"
+								checked=""
+							/>
+							<label class="custom-control-label" for="sidebariconlist-4"
+								><i class="icon-copy dw dw-next-2"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-5"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-5"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-5"
+								><i class="dw dw-fast-forward-1"></i
+							></label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input
+								type="radio"
+								id="sidebariconlist-6"
+								name="menu-list-icon"
+								class="custom-control-input"
+								value="icon-list-style-6"
+							/>
+							<label class="custom-control-label" for="sidebariconlist-6"
+								><i class="dw dw-next"></i
+							></label>
+						</div>
+					</div>
+
+					<div class="reset-options pt-30 text-center">
+						<button class="btn btn-success" id="reset-settings">
+							Reset Settings
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="left-side-bar">
+			<div class="brand-logo">
+				<a href="#">
+					<img src="src/images/icon.png" style="width: 50px;" alt="" class="dark-logo" />
+					<img
+						src="src/images/icon.png"
+						style="width: 50px;"
+						alt=""
+						class="light-logo"
+					/><font color="black">&nbsp;Danzz Coding</font>
+				</a>
+				<div class="close-sidebar" data-toggle="left-sidebar-close">
+					<i class="ion-close-round"></i>
+				</div>
+			</div>
+			<div class="menu-block customscroll">
+				<div class="sidebar-menu">
+					<ul id="accordion-menu">
+						<li>
+							<a href="/" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-house"></span
+								><span class="mtext">Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="/dash" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-grid"></span
+								><span class="mtext">Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="/profile" class="dropdown-toggle no-arrow">
+								<span class="micon bx bx-user"></span
+								><span class="mtext">Profile</span>
+							</a>
+						</li>
+						<li>
+							<a href="/pricing" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-cash"></span
+								><span class="mtext">Pricing</span>
+							</a>
+						</li>
+						<li>
+							<a href="/donation" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-coin"></span
+								><span class="mtext">Donation</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://wa.me/628829633947?text=menu" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-robot"></span
+								><span class="mtext">Example Bot</span>
+							</a>
+						</li>
+						<li>
+							<a href="https//youtube.com/c/DanzzCoding" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-code"></span
+								><span class="mtext">Source Code</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-globe"></span
+								><span class="mtext">Web</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="https://github.com/Danzzxcodes">Base Wa Bot</a></li>
+								<li>
+									<a href="https://wa.me/6288296339947">Example Bot</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-headset"></span
+								><span class="mtext">Customer Service</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="https://wa.me/6288296339947">Cs on 24 Hours</a></li>
+								<li>
+									<a href="https://chat.whatsapp.com/Gq71DUTFOhRE9efPYyobYu">Cs Group on 24 Hours</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="sidebar-small-cap">Main</div>
+						</li>
+						<li>
+							<a href="/main/statistic" class="dropdown-toggle no-arrow">
+								<span class="micon fa fa-database"></span
+								><span class="mtext">Statistic</span>
+							</a>
+						</li>
+						<li>
+							<a href="/main/runtime" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-clock"></span
+								><span class="mtext">Runtime</span>
+							</a>
+						</li>
+						<li>
+							<div class="sidebar-small-cap">Features</div>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-arrow-down"></span
+								><span class="mtext">Downloader</span>
+							</a>
+							<ul class="submenu">
+						<li><a href="/api/downloader/ytplay?query=cara membuat rest api&apikey=danzz">Youtube Play</a></li>
+                        <li><a href="/api/downloader/ytmp3?url=https://youtu.be/FpX_1f9HTQ4&apikey=danzz">Youtube Mp3</a></li>
+                        <li><a href="/api/downloader/ytmp4?url=https://youtu.be/FpX_1f9HTQ4&apikey=danzz">Youtube Mp4</a></li>
+                        <li><a href="/api/downloader/facebook?url=https://www.facebook.com/TeguhSuwandi19/videos/5230538373729232/?mibextid=XBoEBUlHZ1eoDabU&apikey=danzz">Facebook</a></li>
+                        <li><a href="/api/downloader/twitter?url=https://twitter.com/30SECVlDEOS/status/1572038574140178433?s=20&t=oQSHC7nbREPNVE68Zd4Bww&apikey=danzz">Twitter</a></li>
+                        <li><a href="/api/downloader/tiktok?url=https://vm.tiktok.com/ZSdTj6w8b/?k=1&apikey=danzz">Tiktok Mp3 Mp4</a></li>
+                        <li><a href="/api/downloader/igstory?username=ramdani_real01&apikey=danzz">Instagram Story</a></li>
+                        <li><a href="/api/downloader/igreels?url=ENTER_URL&apikey=danzz">Instagram Reels</a></li>
+                        <li><a href="/api/downloader/instagram?url=ENTER_URL&apikey=danzz">Instagram Video</a></li>
+                        <li><a href="/api/downloader/mediafire?url=https://www.mediafire.com/file/pwxob70rpgma9lz/GBWhatsApp_v8.75%2528Tutorial_Yud%2529.apk/file&apikey=danzz">Mediafire</a></li>
+                        <li><a href="/api/downloader/soundcloud?url=https://soundcloud.com/ndaa-212683099/dj-coba-kau-ingat-ingat-kembali-seharusnya-aku-jungle-dutch-terbaru-2021-full-bass-viral-tik?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&apikey=danzz">Sound Cloud</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-camera-video"></span
+								><span class="mtext">Asupan</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/asupan/random?apikey=danzz">Random</a></li>
+								<li><a href="/api/asupan/santuy?apikey=danzz">Santuy</a></li>
+								<li><a href="/api/asupan/bocil?apikey=danzz">Bocil</a></li>
+								<li><a href="/api/asupan/hijaber?apikey=danzz">Hijaber</a></li>
+								<li><a href="/api/asupan/ukhty?apikey=danzz">Ukhty</a></li>
+								<li><a href="/api/asupan/gheayubi?apikey=danzz">Gheayubi</a></li>
+								<li><a href="/api/asupan/rikagusriani?apikey=danzz">Rikagusriani</a></li>
+								</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-image"></span
+								><span class="mtext">Cecan</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/cecan/random?apikey=danzz">Random</a></li>
+								<li><a href="/api/cecan/hijaber?apikey=danzz">Hijaber</a></li>
+								<li><a href="/api/cecan/china?apikey=danzz">China</a></li>
+								<li><a href="/api/cecan/indonesia?apikey=danzz">Indonesia</a></li>
+								<li><a href="/api/cecan/korea?apikey=danzz">Korea</a></li>
+								<li><a href="/api/cecan/malaysia?apikey=danzz">Malaysia</a></li>
+								<li><a href="/api/cecan/japan?apikey=danzz">Japan</a></li>
+								<li><a href="/api/cecan/thailand?apikey=danzz">Thailand</a></li>
+								<li><a href="/api/cecan/vietnam?apikey=danzz">Vietnam</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-search"></span
+								><span class="mtext">Search</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/search/youtube?query=cara memebuat rest api bot wa&apikey=danzz">Youtube</a></li>
+								<li><a href="/api/search/xxxxvideo?query=japan&apikey=danzz">Xxxx Video</a></li>
+								<li><a href="/api/search/xnxxvideo?query=japan&apikey=danzz">Xnxx Video</a></li>
+								<li><a href="/api/search/pornhub?query=japan&apikey=danzz">Porn Hub</a></li>
+								<li><a href="/api/search/wikimedia?query=manusia&apikey=danzz">Wiki Media</a></li>
+								<li><a href="/api/search/pintetest?query=kucing&apikey=danzz">Pinterest</a></li>
+								<li><a href="/api/search/gsmarena?query=samsung j4+&apikey=danzz">Gsm Arena</a></li>
+								<li><a href="/api/search/gplaystore?query=mobile legends&num=100&apikey=danzz">Play Store</a></li>
+								<li><a href="/api/search/appstore?query=mobile legende&num=100&page=1&apikey=danzz">App Store</a></li>
+								<li><a href="/api/search/happymod?query=mobile legende&apikey=danzz">Happy Mod</a></li>
+								<li><a href="/api/search/wallpaper?query=aesthetic&apikey=danzz">Wallpaper</a></li>
+								<li><a href="/api/search/google?query=Ramdani Official Bot Wa&apikey=danzz">Google</a></li>
+								<li><a href="/api/search/googleimage?query=Ramdani Official Bot Wa&apikey=danzz">Google Image</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-film"></span
+								><span class="mtext">Film</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/film/search?apikey=danzz">Search</a></li>
+								<li><a href="/api/film/play?apikey=danzz">Play</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon fa fa-font"></span
+								><span class="mtext">Text Pro</span>
+							</a>
+							<ul class="submenu">
+						<li><a href="/api/textpro/pencil?text=danzz&apikey=danzz">Pencils</a></li>
+                   	 <li><a href="/api/textpro/glitch?text=danzz&apikey=danzz">Glitch</a></li>
+                        <li><a href="/api/textpro/berry?text=danzz&apikey=danzz">Berry</a></li>
+                        <li><a href="/api/textpro/blackpink?text=danzz&apikey=danzz">Black pink</a></li>
+                        <li><a href="/api/textpro/neon?text=danzz&apikey=danzz">Neon</a></li>
+                        <li><a href="/api/textpro/logobear?text=danzz&apikey=danzz">Logo Bear</a></li>
+                        <li><a href="/api/textpro/3dchristmas?text=danzz&apikey=danzz">3D Christmas</a></li>
+                        <li><a href="/api/textpro/thunder?text=danzz&apikey=danzz">Thunder</a></li>
+                        <li><a href="/api/textpro/3dboxtext?text=danzz&apikey=danzz">3D Box</a></li>
+                        <li><a href="/api/textpro/glitch2?text=danzz&text2=pro&apikey=danzz">Glitch2</a></li>
+                        <li><a href="/api/textpro/glitchtiktok?text=danzz&text2=pro&apikey=danzz">Glitch Tiktok</a></li>
+                        <li><a href="/api/textpro/video-game-classic?text=danzz&text2=pro&apikey=danzz">Video Game Classic</a></li>
+                        <li><a href="/api/textpro/marvel-studios?text=danzz&text2=pro&apikey=danzz">Marvel Studios</a></li>
+                        <li><a href="/api/textpro/ninja-logo?text=danzz&text2=pro&apikey=danzz">Ninja Logo</a></li>
+                        <li><a href="/api/textpro/transformer?text=danzz&apikey=danzz">Transformer</a></li>
+                        <li><a href="/api/textpro/green-horror?text=danzz&apikey=danzz">Green Horrorer</a></li>
+                        <li><a href="/api/textpro/magma?text=danzz&apikey=danzz">Magma</a></li>
+                        <li><a href="/api/textpro/3d-neon-light?text=danzz&apikey=danzz">3d Neon Light</a></li>
+                        <li><a href="/api/textpro/3d-orange-juice?text=danzz&apikey=danzz">3d Orange Juice</a></li>
+                        <li><a href="/api/textpro/chocolate-cake?text=danzz&apikey=danzz">Chocolate Cake</a></li>
+                        <li><a href="/api/textpro/strawberry?text=danzz&apikey=danzz">Strawberry</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-edit"></span
+								><span class="mtext">Photo Oxy</span>
+							</a>
+							<ul class="submenu">
+							<li><a href="/api/photooxy/flaming?text=danzz&apikey=danzz">Flaming</a></li>
+                        <li><a href="/api/photooxy/shadow-sky?text=danzz&apikey=danzz">Shadow Sky</a></li>
+                        <li><a href="/api/photooxy/metallic?text=danzz&apikey=danzz">Metallic</a></li>
+                        <li><a href="/api/photooxy/naruto?text=danzz&apikey=danzz">Naruto</a></li>
+                        <li><a href="/api/photooxy/pubg?text=Pubg&text2=danzz&apikey=danzz">PUBG</a></li>
+                        <li><a href="/api/photooxy/under-grass?text=danzz&apikey=danzz">Under Grass</a></li>
+                        <li><a href="/api/photooxy/harry-potter?text=danzz&apikey=danzz">Harry Potter</a></li>
+                        <li><a href="/api/photooxy/flower-typography?text=danzz&apikey=danzz">Flower Typography</a></li>
+                        <li><a href="/api/photooxy/picture-of-love?text=danzz&apikey=danzz">Picture Of Love</a></li>
+                        <li><a href="/api/photooxy/coffee-cup?text=danzz&apikey=danzz">Coffee Cup</a></li>
+                        <li><a href="/api/photooxy/butterfly?text=danzz&apikey=danzz">Butterfly</a></li>
+                        <li><a href="/api/photooxy/night-sky?text=danzz&apikey=danzz">Night Sky</a></li>
+                        <li><a href="/api/photooxy/carved-wood?text=danzz&apikey=danzz">Carved Wood</a></li>
+                        <li><a href="/api/photooxy/illuminated-metallic?text=danzz&apikey=danzz">Illuminated Metallic</a></li>
+                        <li><a href="/api/photooxy/sweet-candy?text=danzz&apikey=danzz">Sweet Candy</a></li>
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-images"></span
+								><span class="mtext">Canvas</span>
+							</a>
+							<ul class="submenu">
+						<li><a href="/api/canvas/welcome?name=danzz&gcname=cs danzz rest api&member=1&pp=https://telegra.ph/file/438ba064eff21aa28514d.jpg&bg=https://telegra.ph/file/438ba064eff21aa28514d.jpg&apikey=danzz">Welcome</a></li>
+						<li><a href="/api/canvas/welcome2?name=danzz&mem=1&gcname=cs danzz rest api&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Welcome 2</a></li>
+                        <li><a href="/api/canvas/welcome3?name=danzz&mem=1&gcname=cs danzz rest api&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&gcicon=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Welcome 3</a></li>
+                        <li><a href="/api/canvas/goodbye?name=danzz&gcname=cs danzz rest api&member=1&pp=https://telegra.ph/file/438ba064eff21aa28514d.jpg&bg=https://telegra.ph/file/438ba064eff21aa28514d.jpg&apikey=danzz">Good Bye</a></li>
+                        <li><a href="/api/canvas/goodbye2?name=danzz&mem=1&gcname=cs danzz rest api&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Good Bye 2</a></li>
+                        <li><a href="/api/canvas/goodbye3?name=danzz&mem=1&gcname=cs danzz rest api&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&gcicon=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Good Bye 3</a></li>
+                        <li><a href="/api/canvas/verify?name=danzz&mem=1&sn=123&pp=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Verify</a></li>
+                        <li><a href="/api/canvas/verify2?name=danzz&nameverify=danzz&name2=danzz&pp=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&pp2=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Verify 2</a></li>
+                        <li><a href="/api/canvas/sadcat?text=asep&apikey=danzz">Sad Cat</a></li>
+                        <li><a href="/api/canvas/facts?text=asep&apikey=danzz">Fatcs</a></li>
+                        <li><a href="/api/canvas/pikachu?text=asep&apikey=danzz">Pikachu</a></li>
+                        <li><a href="/api/canvas/biden?text=Rakyat Konnn&apikey=danzz">Biden</a></li>
+                        <li><a href="/api/canvas/oogway?text=asep&apikey=danzz">Oogway</a></li>
+                        <li><a href="/api/canvas/wanted?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Wanted</a></li>
+                        <li><a href="/api/canvas/gun?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Gun</a></li>
+                        <li><a href="/api/canvas/greyscale?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Grey Scale</a></li>
+                        <li><a href="/api/canvas/ad?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Ad</a></li>
+                        <li><a href="/api/canvas/blur?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Blur</a></li>
+                        <li><a href="/api/canvas/uncover?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Uncover</a></li>
+                        <li><a href="/api/canvas/invert?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Invert</a></li>
+                        <li><a href="/api/canvas/alert?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Alert</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon fa fa-paint-brush"></span
+								><span class="mtext">Maker</span>
+							</a>
+							<ul class="submenu">
+							<li><a href="/api/maker/ttp?text=dani ganteng&apikey=danzz">Ttp</a></li>
+                        	<li><a href="/api/maker/attp?text=dani ganteng&apikey=danzz">Attp</a></li>
+                        	<li><a href="/api/maker/nulis?text=dani ganteng&apikey=danzz">Nulis</a></li>
+                        	<li><a href="/api/maker/nulis2?text=dani ganteng&apikey=danzz">Nulis 2</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-images"></span
+								><span class="mtext">Wallpaper</span>
+							</a>
+							<ul class="submenu">
+							<li><a href="/api/wallpaper/random?apikey=danzz">Random</a></li>
+                        	<li><a href="/api/wallpaper/ml?apikey=danzz">Ml</a></li>
+                      	  <li><a href="/api/wallpaper/pubg?apikey=danzz">Pubg</a></li>
+                    	    <li><a href="/api/wallpaper/neon?apikey=danzz">Neon</a></li>
+                      	  <li><a href="/api/wallpaper/code?apikey=danzz">Code</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-game"></span
+								><span class="mtext">Game</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/game/asahotak?apikey=danzz">Asah Otak</a></li>
+            					<li><a href="/api/game/caklontong?apikey=danzz">Cak Lontong</a></li>
+            					<li><a href="/api/game/truth?apikey=danzz">Truth</a></li>
+            					<li><a href="/api/game/dare?apikey=danzz">Dare</a></li>
+            					<li><a href="/api/game/darkjoke?apikey=danzz">Dark Joke</a></li>
+            					<li><a href="/api/game/family100?apikey=danzz">Family 100</a></li>
+            					<li><a href="/api/game/pantun?apikey=danzz">Pantun</a></li>
+            					<li><a href="/api/game/siapakahaku?apikey=danzz">Siapakah Aku</a></li>
+            					<li><a href="/api/game/tebakgabut?apikey=danzz">Tebak Gabut</a></li>
+            					<li><a href="/api/game/tebaklucu?apikey=danzz">Tebak Lucu</a></li>
+            					<li><a href="/api/game/susunkata?apikey=danzz">Susun Kata</a></li>
+            					<li><a href="/api/game/tebakgambar?apikey=danzz">Tebak Gambar</a></li>
+            					<li><a href="/api/game/tebakbendera?apikey=danzz">Tebak Bendera</a></li>
+            					<li><a href="/api/game/tebakgame?apikey=danzz">Tebak Game</a></li>
+            					<li><a href="/api/game/tebakkata?apikey=danzz">Tebak Kata</a></li>
+            					<li><a href="/api/game/tebaklirik?apikey=danzz">Tebak Lirik</a></li>
+            					<li><a href="/api/game/tebaklagu?apikey=danzz">Tebak Lagu</a></li>
+            					<li><a href="/api/game/tebakkimia?apikey=danzz">Tebak Kimia</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-image"></span
+								><span class="mtext">Sfw</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/sfw/waifu?apikey=danzz">Waifu</a></li>
+                        		<li><a href="/api/sfw/husbu?apikey=danzz">Husbu</a></li>
+                        		<li><a href="/api/sfw/loli?apikey=danzz">Loli</a></li>
+                        		<li><a href="/api/sfw/milf?apikey=danzz">Milf</a></li>
+                        		<li><a href="/api/sfw/neko?apikey=danzz">Neko</a></li>
+                        		<li><a href="/api/sfw/shota?apikey=danzz">Shota</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-image"></span
+								><span class="mtext">Nsfw</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/nsfw/hentai?apikey=danzz">Hentai</a></li>
+                        		<li><a href="/api/nsfw/glasses?apikey=danzz">Glasses</a></li>
+                        		<li><a href="/api/nsfw/neko?apikey=danzz">Neko</a></li>
+                        		<li><a href="/api/nsfw/orgy?apikey=danzz">Orgy</a></li>
+                        		<li><a href="/api/nsfw/panties?apikey=danzz">Panties</a></li>
+                        		<li><a href="/api/nsfw/foot?apikey=danzz">Foot</a></li>
+                        		<li><a href="/api/nsfw/cuckold?apikey=danzz">Cuckold</a></li>
+                        		<li><a href="/api/nsfw/pussy?apikey=danzz">Pussy</a></li>
+                        		<li><a href="/api/nsfw/yuri?apikey=danzz">Yuri</a></li>
+                        		<li><a href="/api/nsfw/jahy?apikey=danzz">Jahy</a></li>
+                      		  <li><a href="/api/nsfw/ahegao?apikey=danzz">Ahegao</a></li>
+                        		<li><a href="/api/nsfw/bdsm?apikey=danzz">Bdsm</a></li>
+                       		 <li><a href="/api/nsfw/blowjob?apikey=danzz">Blowjob</a></li>
+                       		 <li><a href="/api/nsfw/gangbang?apikey=danzz">Gang Bang</a></li>
+                      		  <li><a href="/api/nsfw/cum?apikey=danzz">Cum</a></li>
+                        		<li><a href="/api/nsfw/ero?apikey=danzz">Ero</a></li>
+                        		<li><a href="/api/nsfw/femdom?apikey=danzz">Femdom</a></li>
+                        		<li><a href="/api/nsfw/manga?apikey=danzz">Manga</a></li>
+                        		<li><a href="/api/nsfw/masturbation?apikey=danzz">Masturbation</a></li>
+                        		<li><a href="/api/nsfw/ass?apikey=danzz">Ass</a></li>
+                        		<li><a href="/api/nsfw/eba?apikey=danzz">Eba</a></li>
+                        		<li><a href="/api/nsfw/thighs?apikey=danzz">Thighs</a></li>
+                        		<li><a href="/api/nsfw/zettai?apikey=danzz">Zettai</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon fa fa-smile"></span
+								><span class="mtext">Fun</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/fun/simi?text=hai&lang=id&apikey=danzz">Simi</a></li>
+								<li><a href="/api/fun/simi-en?text=hii&apikey=danzz">Simi English</a></li>
+								<li><a href="/api/fun/simi-jp?text=hii&apikey=danzz">Simi Japan</a></li>
+								<li><a href="/api/fun/simi-id?text=hii&apikey=danzz">Simi Indonesia</a></li>
+								<li><a href="/api/fun/simi-ar?text=hii&apikey=danzz">Simi Arab</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon fa fa-bullseye"></span
+								><span class="mtext">Random</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/random/meme?apikey=danzz">Meme</a></li>
+                       	 	<li><a href="/api/random/quotes?apikey=danzz">Quotes</a></li>
+                       		<li><a href="/api/random/dadu?apikey=danzz">Dadu</a></li>
+                      		  <li><a href="/api/random/coffee?apikey=danzz">Coffee</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-user-check"></span
+								><span class="mtext">Stalker</span>
+							</a>
+							<ul class="submenu">
+							<li><a href="/api/stalker/github?username=Danzzxcodes&apikey=danzz">Github</a></li>
+          	              <li><a href="/api/stalker/instagram?username=ramdani_real01&apikey=danzz">Instagram</a></li>
+               	         <li><a href="/api/stalker/tiktok?username=muhammad_ramdanii&apikey=danzz">Tiktok</a></li>
+                  	      <li><a href="/api/stalker/npm?username=hx&apikey=danzz">Npm</a></li>
+                   	     <li><a href="/api/stalker/nickhago?id=31148107&apikey=danzz">Nick Hago</a></li>
+                  	      <li><a href="/api/stalker/nickccfun?id=16427735&apikey=danzz">Nick Coco Fun</a></li>
+                      	  <li><a href="/api/stalker/nickbgl?id=108689087&apikey=danzz">Nick Bigo Live</a></li>
+                        	<li><a href="/api/stalker/nicknmtv?id=2753124392&apikey=danzz">Nick Nimo TV</a></li>
+                        	<li><a href="/api/stalker/nickpubg?id=ENTER_ID&apikey=danzz">Nick Pubg Mobile</a></li>
+                        	<li><a href="/api/stalker/nickff?id=552992060&apikey=danzz">Nick Free Fire</a></li>
+                        	<li><a href="/api/stalker/nickml?id=628299715&zoneid=10135&apikey=danzz">Nick Mobile Legends</a></li>
+                   	     <li><a href="/api/stalker/nickmla?id=3937205&zoneid=40017&apikey=danzz">Nick ML Adventure</a></li>
+                      	  <li><a href="/api/stalker/nicklokapala?id=YZTTG3CU&apikey=danzz">Nick Lokapala</a></li>
+                	        <li><a href="/api/stalker/nickdomino?id=ENTER_ID&apikey=danzz">Nick Domino</a></li>
+           	             <li><a href="/api/stalker/nickzepeto?id=zepeto&apikey=danzz">Nick Zepeto</a></li>
+          	              <li><a href="/api/stalker/nicksausage?id=7fs17x&apikey=danzz">Nick Sausage Man</a></li>
+           	             <li><a href="/api/stalker/nickaov?id=293306941441181&apikey=danzz">Nick Arena Of Valor</a></li>
+                      	  <li><a href="/api/stalker/nickcod?id=6290150021186841472&apikey=danzz">Nick Call Of Duty</a></li>
+                        	<li><a href="/api/stalker/nickpb?id=dani123&apikey=danzz">Nick Point Blank</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-link"></span
+								><span class="mtext">Short Link</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/shortlink/tinyurl?url=https://danzz-api.herokuapp.com/&apikey=danzz">Tinyurl</a>
+                        		<li><a href="/api/shortlink/cuttly?url=https://danzz-api.herokuapp.com/&apikey=danzz">Cuttly</a>
+                        		<li><a href="/api/shortlink/bitly?url=https://danzz-api.herokuapp.com/&apikey=danzz">Bitly</a>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-moon"></span
+								><span class="mtext">Islamic</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/islamic/randomimage?apikey=danzz">Random Image</a></li>
+                        		<li><a href="/api/islamic/jadwalsholat?apikey=danzz">Jadwal Sholat</a></li>
+                 		       <li><a href="/api/islamic/asmaulhusna?apikey=danzz">Asmaul Husna</a></li>
+                   		     <li><a href="/api/islamic/hadist?apikey=danzz">Hadist</a></li>
+                  		      <li><a href="/api/islamic/quran?apikey=danzz">Quran</a></li>
+               		         <li><a href="/api/islamic/surah?text=1&apikey=danzz">Surah</a></li>
+              		          <li><a href="/api/islamic/tafsirsurah?text=1&apikey=danzz">Tafsir Surah</a></li>
+             	  	         <li><a href="/api/islamic/kisahnabi?apikey=danzz">Kisah Nabi</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-compass"></span
+								><span class="mtext">Trending</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/trending/bekasi?apikey=danzz">Bekasi</a></li>
+                        		<li><a href="/api/trending/bandung?apikey=danzz">Bandung</a></li>
+                     		   <li><a href="/api/trending/jakarta?apikey=danzz">Jakarta</a></li>
+                     		   <li><a href="/api/trending/depok?apikey=danzz">Depok</a></li>
+                    		    <li><a href="/api/trending/pekanbaru?apikey=danzz">Pekanbaru</a></li>
+                     		   <li><a href="/api/trending/surabaya?apikey=danzz">Surabaya</a></li>
+                     		   <li><a href="/api/trending/makassar?apikey=danzz">Makassar</a></li>
+                   		     <li><a href="/api/trending/medan?apikey=danzz">Medan</a></li>
+                     		   <li><a href="/api/trending/palembang?apikey=danzz">Palembang</a></li>
+                      		  <li><a href="/api/trending/semarang?apikey=danzz">Semarang</a></li>
+                        		<li><a href="/api/trending/tangerang?apikey=danzz">Tanggerang</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-book"></span
+								><span class="mtext">News</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/news/inews?apikey=danzz">INews</a></li>
+                       		 <li><a href="/api/news/kompas?apikey=danzz">Kompas</a></li>
+                     		   <li><a href="/api/news/okezone?apikey=danzz">Oke Zone</a></li>
+                     		   <li><a href="/api/news/antara?apikey=danzz">Antara</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-info-circle"></span
+								><span class="mtext">Information</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/information/gempa?apikey=danzz">Gempa</a></li>
+                        		<li><a href="/api/information/covidworld?apikey=danzz">Covid World</a></li>
+                        		<li><a href="/api/information/postalcode?city=bogor&apikey=danzz">Postal Code</a></li>
+                        		<li><a href="/api/information/hoax?apikey=danzz">Hoax</a></li>
+                        		<li><a href="/api/information/jadwalbola?apikey=danzz">Jadwal Bola</a></li>
+                        		<li><a href="/api/information/clock?apikey=danzz">Jam WIB</a></li>
+                        		<li><a href="/api/information/worldclock?apikey=danzz">Jam Dunia</a></li>
+                       		 <li><a href="/api/information/kbbi?query=bunga&apikey=danzz">Kbbi</a></li>
+                      		  <li><a href="/api/information/wikipedia?query=manusia&apikey=danzz">Wikipedia</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-anchor"></span
+								><span class="mtext">Primbon</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/primbon/ramalanjodoh?name1=dani&name2=nia&apikey=danzz">Ramalan Jodoh</a></li>
+                        		<li><a href="/api/primbon/artinama?name=danzz&apikey=danzz">Arti Nama</a></li>
+                        		<li><a href="/api/primbon/tafsirmimpi?dream=basah&apikey=danzz">Tafsir Mimpi</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-tools"></span
+								><span class="mtext">Tools</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/tools/ebase64?text=DANIGANTENG&apikey=danzz">Base64 Encrypt</a></li>
+                       		 <li><a href="/api/tools/dbase64?text=DANIGANTENG&apikey=danzz">Base64 Decrypt</a></li>
+                    		    <li><a href="/api/tools/ebase32?text=DANIGANTENG&apikey=danzz">Base32 Encrypt</a></li>
+                    		    <li><a href="/api/tools/dbase32?text=DANIGANTENG&apikey=danzz">Base32 Decrypt</a></li>
+                    		    <li><a href="/api/tools/ebinary?text=DANIGANTENG&apikey=danzz">Binary Encrypt</a></li>
+                    		    <li><a href="/api/tools/dbinary?text=DANIGANTENG&apikey=danzz">Binary Decrypt</a></li>
+                    		    <li><a href="/api/tools/styletext?text=DANIGANTENG&apikey=danzz">Style Text</a></li>
+                    		    <li><a href="/api/tools/translate?text=Thanks&lang=ms&apikey=danzz">Translate</a></li>
+                    		    <li><a href="/api/tools/ssweb?link=https://danzz-api.herokuapp.com/&apikey=danzz">Ssweb</a></li>
+                   		     <li><a href="/api/tools/fakeaddress?apikey=danzz">Fake Address</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bx bx-leaf"></span
+								><span class="mtext">Other</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/api/other/qrcode?url=danzz&apikey=danzz">Qr Code</a></li>
+								<li><a href="/api/other/couplepp?url=danzz&apikey=danzz">Couple Pp</a></li>
+                    		    <li><a href="/api/other/balikhuruf?text=dani&apikey=danzz">Balik Huruf</a></li>
+                    		    <li><a href="/api/other/balikangka?text=1234&apikey=danzz">Balik Angka</a></li>
+                    		    <li><a href="/api/other/bilangangka?text=1234&apikey=danzz">Bilang Angka</a></li>
+                     		   <li><a href="/api/other/besarkecil?text=danzz&apikey=danzz">Besar Kecil</a></li>
+                     		   <li><a href="/api/other/heleh?text=danzz&apikey=danzz">Heleh</a></li>
+                    		    <li><a href="/api/other/huluh?text=danzz&apikey=danzz">Huluh</a></li>
+                    		    <li><a href="/api/other/hilih?text=danzz&apikey=danzz">Hilih</a></li>
+                     		   <li><a href="/api/other/halah?text=danzz&apikey=danzz">Halah</a></li>
+                   		     <li><a href="/api/other/kapital?text=danzz&apikey=danzz">Kapital</a></li>
+                    		    <li><a href="/api/other/katajago?text=danzz&apikey=danzz">Kata Jago</a></li>
+                     		   <li><a href="/api/other/resepmasakan?text=danzz&apikey=danzz">Resep Masakan</a></li>
+                    		    <li><a href="/api/other/jumblahhuruf?text=danzz&apikey=danzz">Jumblah Huruf</a></li>
+                     		   <li><a href="/api/other/jumblahangka?text=123&apikey=danzz">Jumblah Angka</a></li>
+                   		     <li><a href="/api/other/detailhero?hero=fanny&apikey=danzz">Detail Hero</a></li>
+							</ul>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<div class="sidebar-small-cap">Contact</div>
+						</li>
+						<li>
+							<a href="mailto:danzzcoding@gmail.com" class="dropdown-toggle no-arrow">
+								<span class="micon bx bx-envelope"></span
+								><span class="mtext">Email</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Danzzxcodes" class="dropdown-toggle no-arrow">
+								<span class="micon fab fa-github"></span
+								><span class="mtext">Github</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://youtube.com/c/DanzzCoding" class="dropdown-toggle no-arrow">
+								<span class="micon fab fa-youtube"></span
+								><span class="mtext">Youtube</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://instagram.com/ramdani_real01" class="dropdown-toggle no-arrow">
+								<span class="micon fab fa-instagram"></span
+								><span class="mtext">Instagram</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://facebook.com/profile.php?id=100055274594084" class="dropdown-toggle no-arrow">
+								<span class="micon fab fa-facebook"></span
+								><span class="mtext">Facebook</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-overlay"></div>
+
+		<div class="main-container">
+			<div class="pd-ltr-20 xs-pd-20-10">
+				<div class="min-height-200px">
+					<div class="page-header">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="title">
+									<h4>DONATION</h4>
+								</div>
+								<nav aria-label="breadcrumb" role="navigation">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a href="/dash">Dashboard</a>
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">
+											donation
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+				<div class="row pb-20">
+					<div class="col-xl-3 col-lg-3 col-md-1 mb-20">
+						<div class="card-box height-100-p widget-style3">
+							<div class="d-flex flex-wrap">
+								<div class="">
+									<div class="weight-700 font-24 text-dark"></div>
+									<h4><b>QRIS ALL PAYMENT<b></h4>
+									<img src="https://telegra.ph/file/ce41f880f591f9e13117e.jpg" style="width: 270px;" alt="Qris All Payment" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+						<div class="card-box height-100-p widget-style3">
+							<div class="d-flex flex-wrap">
+								<div class="widget-data">
+									<div class="weight-700 font-24 text-dark"></div>
+									<div class="font-14 text-secondary weight-500">
+									<h4><b>E-WALLETS<b></h4>
+								<img src="https://telegra.ph/file/b89b93147d600b4241d95.jpg" class="rounded-circle shadow-4"style="width: 30px;" alt="Avatar" />
+								<p> Dana: 089512545999</p>
+								<div>
+								<img src="https://telegra.ph/file/bf2e29e770eee74e7e5c7.jpg" class="rounded-circle shadow-4"style="width: 30px;" alt="Avatar" />
+								<p> Gopay: 089512545999</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                        <div class="col-lg-12 text-center">
+                        	<div class="text-md-left font-weight-bold">
+                            Contact
+                            <p>
+                            	<a href="https://youtube.com/c/DanzzCoding" class="btn btn-primary btn-sm ml-2" target="_blank"><i class=""></i>Location: Bogor - Indonesia</a>
+                            	<a href="mailto:danzzcoding@gmail.com" class="btn btn-primary btn-sm ml-2" target="_blank"><i class=""></i>Email: danzzcoding@gmail.com</a>
+                            	<a href="https://wa.me/6288296339947" class="btn btn-primary btn-sm ml-2" target="_blank"><i class=""></i>Phone Number: 0882-9633-9947</a>
+                            	</div>
+                            	<div class="col-lg-12 text-center">
+                            	<div class="text-md-left font-weight-bold">
+                            	Social Media
+                            	<div class="col-lg-12 text-center">
+                                <a href="https://instagram.com/ramdani_real01" class="btn btn-primary btn-sm ml-2" target="_blank"><i class="fab fa-instagram"></i>&nbsp;Instagram</a>
+                                <a href="https://instagram.com/ramdani_real01" class="btn btn-primary btn-sm ml-2" target="_blank"><i class="fab fa-facebook"></i>&nbsp;Facebook</a>
+                                
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					Copyright © 2022
+					<a href="https://youtube.com/c/DanzzCoding" target="_blank"
+						>Danzz Coding</a
+					>. All rights reserved.
+				</div>
+			</div>
+		</div>
+		<!-- welcome modal start -->
+		<div class="welcome-modal">
+			<button class="welcome-modal-close">
+				<i class="bi bi-x-lg"></i>
+			</button>
+			<iframe
+				class="w-100 border-0"
+				src="https://embed.lottiefiles.com/animation/58813"
+			></iframe>
+			<div class="text-center">
+				<h3 class="h5 weight-500 text-center mb-2">
+					Upgrade to premium
+					<span role="img" aria-label="gratitude">☕</span>
+				</h3>
+				
+			</div>
+			<div class="text-center mb-1">
+				<div>
+					<a
+						target="_blank"
+						class="btn btn-light btn-block btn-sm"
+					>
+						<span class="text-black weight-600"><h4>Rp. 7k discount 75%</h4>
+							<p><i class="bx bx-check-circle"></i> Request 1000/day</p>
+							<p><i class="bx bx-check-circle"></i> Custom apikey</p>
+							<p><i class="bx bx-check-circle"></i> Limit 1000/day</p>
+							<p><i class="bx bx-check-circle"></i> Premium features</p>
+							<p><i class="bx bx-check-circle"></i> Expired 1 month</p>
+						</span>
+						<span class="weight-600"></span>
+					</a>
+				</div>
+				<script
+					async
+					defer="defer"
+					src=""
+				></script>
+			</div>
+			<a
+				href="https://wa.me/6288296339947?text=BANG+MAU+ORDER+PREMIUM+USER"
+				target="_blank"
+				class="btn btn-success btn-sm mb-0 mb-md-3 w-100"
+			>
+				UPGRADE
+				<i class="fa fa-arrow-up"></i>
+			</a>
+		</div>
+		<button class="welcome-modal-btn">
+			<i class="fa fa-arrow-up"></i> Upgrade
+		</button>
+		<!-- welcome modal end -->
+		<!-- js -->
+		<script src="vendors/jquery/jquery.min.js"></script>
+    	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    	<script src="vendors/jquery-easing/jquery.easing.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/dashboard.js"></script>
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="src/plugins/apexcharts/apexcharts.min.js"></script>
+		<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+		<script src="vendors/scripts/dashboard3.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	</body>
+</html>

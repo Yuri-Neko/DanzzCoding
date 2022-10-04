@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DANZZ API - REGISTER</title>
+
+        <!-- CSS -->
+        <style>
+        /* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070f4;
+    column-gap: 5px;
+}
+.form{
+    position: absolute;
+    max-width: 340px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 7px;
+    background: #FFF;
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+header{
+    font-size: 27px;
+    font-weight: 700;
+    color: #232836;
+    text-align: center;
+}
+form{
+    margin-top: 0.1px;
+}
+.form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field input{
+    outline: none;
+    padding: 0 5px;
+    border: 1px solid#d4d4d4;
+}
+.field input:focus{
+    border-bottom-width: 2px;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+.field button{
+    color: #fff;
+    background-color: #0171d3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.field button:hover{
+    background-color: #016dcb;
+}
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+}
+.form-link span,
+.form-link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+.form a{
+    color: #0171d3;
+    text-decoration: none;
+}
+.form-content a:hover{
+    text-decoration: underline;
+}
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #8b8b8b;
+    padding: 0 15px;
+}
+.media-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.facebook{
+    color: #fff;
+    background-color: #4267b2;
+}
+a.facebook .facebook-icon{
+    height: 28px;
+    width: 28px;
+    color: #0171d3;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.facebook-icon,
+img.google-img{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+img.google-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+a.google{
+    border: 1px solid #CACACA;
+}
+a.google span{
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+}
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 20px 10px;
+    }
+    
+}
+</style>
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Registration</header>
+                    <form action="/login">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="input" required>
+                        </div>
+                        
+                        <div class="field input-field">
+                            <input type="username" placeholder="Username" class="input" required>
+                        </div>
+                        
+                        <div class="field input-field">
+                            <input type="number" placeholder="628xxx" class="input" required>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Create password" class="password" required>
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Confirm password" class="password" required>
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+                        
+                        <b>reCaptcha</b><li class="bx bx-check"></li>
+                        <div class="captcha-area">
+       			 	<span class="captcha"></span>
+      				</div>
+   	  			<input type="text" placeholder="Enter captcha" maxlength="6" spellcheck="false" required>
+  						<div class="status-text"></div>
+
+                        <div class="field button-field">
+                            <button>Create account</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="/login">Login</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook'></i>
+                        <span> Signup with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <i class='bx bxl-google'></i>
+                        <span> Signup with Google</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <script>
+        	const forms = document.querySelector(".forms"),
+      pwShowHide = document.querySelectorAll(".eye-icon"),
+      links = document.querySelectorAll(".link");
+
+pwShowHide.forEach(eyeIcon => {
+    eyeIcon.addEventListener("click", () => {
+        let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+        
+        pwFields.forEach(password => {
+            if(password.type === "password"){
+                password.type = "text";
+                eyeIcon.classList.replace("bx-hide", "bx-show");
+                return;
+            }
+            password.type = "password";
+            eyeIcon.classList.replace("bx-show", "bx-hide");
+        })
+        
+    })
+})      
+
+links.forEach(link => {
+    link.addEventListener("click", e => {
+       e.preventDefault(); //preventing form submit
+       forms.classList.toggle("show-signup");
+    })
+})
+</script>
+<script>
+	const captcha = document.querySelector(".captcha"),
+reloadBtn = document.querySelector(".reload-btn"),
+inputField = document.querySelector(".input-area input"),
+checkBtn = document.querySelector(".check-btn"),
+statusTxt = document.querySelector(".status-text");
+
+//storing all captcha characters in array
+let allCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+                     'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
+                     'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+                     't', 'u', 'v', 'w', 'x', 'y', 'z', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+function getCaptcha(){
+  for (let i = 0; i < 6; i++) { //getting 6 random characters from the array
+    let randomCharacter = allCharacters[Math.floor(Math.random() * allCharacters.length)];
+    captcha.innerText += ` ${randomCharacter}`; //passing 6 random characters inside captcha innerText
+  }
+}
+getCaptcha(); //calling getCaptcha when the page open
+//calling getCaptcha & removeContent on the reload btn click
+reloadBtn.addEventListener("click", ()=>{
+  removeContent();
+  getCaptcha();
+});
+
+checkBtn.addEventListener("click", e =>{
+  e.preventDefault(); //preventing button from it's default behaviour
+  statusTxt.style.display = "block";
+  //adding space after each character of user entered values because I've added spaces while generating captcha
+  let inputVal = inputField.value.split('').join(' ');
+  if(inputVal == captcha.innerText){ //if captcha matched
+    statusTxt.style.color = "#4db2ec";
+    statusTxt.innerText = "Nice! You don't appear to be a robot.";
+    setTimeout(()=>{ //calling removeContent & getCaptcha after 4 seconds
+      removeContent();
+      getCaptcha();
+    }, 2000);
+  }else{
+    statusTxt.style.color = "#ff0000";
+    statusTxt.innerText = "Captcha not matched. Please try again!";
+  }
+});
+
+function removeContent(){
+ inputField.value = "";
+ captcha.innerText = "";
+ statusTxt.style.display = "none";
+}
+</script>
+    </body>
+</html>
