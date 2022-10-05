@@ -2,7 +2,7 @@
 `Created by: Danzz Coding`
 
 ### Example
- [`Rest Api`](https://danzzapi.xyz)<br>
+ [`Rest Api`](https://api-danzz.xyz)<br>
 
 ### Information
 Language
