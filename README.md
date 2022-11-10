@@ -15,7 +15,7 @@ Manufacture date
  [`Repo`](https://github.com/Danzzxcodes/danzz-apii/fork)<br>
 
 ### Deploy to heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DanzzCoding/danzz-apiv3)
 
 ### Settings 
 File Setting [`set.js`](https://github.com/Danzzxcodes/danzz-apii/edit/master/set.js)<br>
